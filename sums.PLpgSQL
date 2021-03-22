@@ -1,0 +1,21 @@
+$sql = mysql_query("Select SUM(saldo) FROM cuentas WHERE refcliente='$refcliente'") ;
+$saldo=mysql_query($sql);
+
+$sql = mysql_query("Select SUM(operacion) FROM cuentas WHERE refcliente='$refcliente'") ;
+$operacion =mysql_query($sql) ;
+$Total= $saldo-$operacion ;
+
+select Sum(RCV.importe_RCV), Sum (COP.importe_COP) From RCV, COP where RCV.Registro_Patronal = :Registro or COP.Registro_Patronal = :Registro
+$sql="SELECT saldo AS transferir, SUM(`operacion`) AS Total FROM cuentas WHERE refcliente='$refcliente' ";
+$qry = mysql_query("Select SUM(saldo) FROM cuentas WHERE refcliente='$refcliente'") ;
+$saldo = mysql_result($qry,0) ;
+
+$qry = mysql_query("Select SUM(operacion) FROM cuentas WHERE refcliente='$refcliente'") ;
+$operacion = mysql_result($qry,0) ;
+$Total = $saldo - $operacion ;
+
+SUM( t.tiempo ) AS tiempo,
+SELECT SUM( importe ) AS importe_ingresos FROM ingresos select ((select sum(valor) from tabla1)+(select sum(valor) from tabla2)+(select sum(valor) from tabla3)) as total;
+
+SELECT num_partida AS Partida, SUM(monto_total) AS Total FROM factura GROUP BY num_partida"
+$sql="SELECT SUM(saldo-operacion)as transferir FROM cuentas WHERE refcliente='$refcliente' and refcuenta='$refcuenta2' and saldo='$saldo2'";
